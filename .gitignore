@@ -1,0 +1,5 @@
+#Ignora la parte de eslint para
+.eslintrc.json
+
+#Ignora el archivo gitigonore
+.gitigonore
