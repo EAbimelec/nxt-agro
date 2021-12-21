@@ -52,10 +52,18 @@ const eqObjects = function(object1, object2) {
     }
 };
 
+// FUNCTION IMPLEMENTATION
+const assertObjectsEqual = function(actual, expected) {
+    
+    if (eqObjects(actual, expected)) {
+        console.log("The objects are identical"); 
+    } else {
+        console.log("The objects are different"); 
+    }
+
+};
 
 let obj = {a : 1, b : 2, c : [2, 2, 1]};
 let obj2 = {b : 2, a : 1, c : [2, 2, 1]};
 
-// console.log(`${obj['c']} | ${obj2['c']}`)
-
-console.log(eqObjects(obj, obj2));
+assertObjectsEqual(obj, obj2);
