@@ -13,6 +13,10 @@ const assertEqual = function(actual, expected) {
 
 const eqArrays = function(actual, expected) {
 
+  if (actual.length !== expected.length) {
+    return false;
+  } 
+
   let isEqual = true;
   for (let i = 0; i < actual.length; i++) {
     
@@ -29,4 +33,6 @@ assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), true); // => false
 
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
 assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true);
+
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3", 4]), true);
 
